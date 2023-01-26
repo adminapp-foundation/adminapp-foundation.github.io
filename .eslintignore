@@ -1,0 +1,10 @@
+package.json
+package-lock.json
+node_modules
+platforms
+plugins
+www
+dist
+out-tsc
+coverage
+junit

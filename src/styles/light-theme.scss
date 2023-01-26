@@ -1,0 +1,20 @@
+@use './app-theme';
+@use '@angular/material' as mat;
+
+$adminapp-primary: mat.define-palette(mat.$blue-gray-palette, 600, 500, 700);
+$adminapp-accent: mat.define-palette(mat.$orange-palette, 700, 600, 800);
+$adminapp-warn: mat.define-palette(mat.$red-palette);
+
+$adminapp-theme: mat.define-light-theme((
+ color: (
+   primary: $adminapp-primary,
+   accent: $adminapp-accent,
+   warn: $adminapp-warn
+ ),
+ typography: mat.define-typography-config(),
+ density: 0,
+));
+
+@include mat.all-component-themes($adminapp-theme);
+
+@include app-theme.theme($adminapp-theme);

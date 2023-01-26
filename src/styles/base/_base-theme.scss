@@ -1,0 +1,54 @@
+  @use 'sass:map';
+  @use '@angular/material' as mat;
+
+@use '../constants';
+
+@mixin theme($theme) {
+  $is-dark-theme: map.get($theme, is-dark);
+  $background: map.get($theme, background);
+
+  body {
+    color: if($is-dark-theme, constants.$offwhite, constants.$darkgray);
+  }
+
+  html,
+  body {
+    background: if($is-dark-theme, mat.get-color-from-palette($background, background), constants.$white);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: if($is-dark-theme, constants.$offwhite, constants.$deepgray);
+  }
+
+  h6 {
+    color: if($is-dark-theme, constants.$offwhite, constants.$mediumgray);
+  }
+
+  p,
+  ol,
+  ul,
+  li,
+  input,
+  a {
+    color: if($is-dark-theme, constants.$white, constants.$darkgray);
+  }
+
+  code {
+    color: if($is-dark-theme, constants.$white, constants.$darkgray);
+  }
+
+  .error-text {
+    color: constants.$brightred;
+  }
+
+  @if $is-dark-theme {
+    :root {
+      color-scheme: dark;
+    }
+  }
+}

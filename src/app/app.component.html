@@ -1,0 +1,24 @@
+<header class="site-header" role="banner">
+  <div class="container">
+    <div class="banner-container">
+      <div class="site-logo">
+        <a routerLink="" class="site-logo-link" aria-label="Admin App Foundation">
+          <img
+            src="assets/adminappfoundation-logo.png"
+            alt="Admin App Foundation"
+            class="site-logo-img"
+            role="presentation"
+            aria-hidden="true"
+          />
+        </a>
+      </div>
+      <div>
+        <h1 class="page-title">{{ title }}</h1>
+        <h2 class="headline">Open Source Admin App Tools</h2>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>

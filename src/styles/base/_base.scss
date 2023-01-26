@@ -1,0 +1,20 @@
+@use '../constants';
+@use '../mixins/typography' as typography-mixins;
+
+html,
+body {
+  height: 100%;
+  height: 100vh;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: constants.$main-font;
+  @include typography-mixins.font-size(16);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

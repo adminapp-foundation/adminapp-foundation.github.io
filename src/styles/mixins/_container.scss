@@ -1,0 +1,17 @@
+@use './breakpoint' as breakpoint-mixins;
+
+@mixin make-container($gap-width) {
+    width: 100%;
+    padding-right: $gap-width;
+    padding-left: $gap-width;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@mixin make-container-max-widths($max-widths, $breakpoints) {
+    @each $breakpoint, $container-max-width in $max-widths {
+        @include breakpoint-mixins.media-breakpoint-up($breakpoint, $breakpoints) {
+            max-width: $container-max-width;
+        }
+    }
+}

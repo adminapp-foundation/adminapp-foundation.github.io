@@ -1,0 +1,34 @@
+@media print {
+  * {
+    box-shadow: none !important;
+  }
+
+  body,
+  mat-sidenav-container {
+    background: none !important;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  mat-sidenav.sidenav.mat-sidenav {
+    display: none !important;
+  }
+
+  .mat-sidenav-content {
+    margin: 0 !important;
+  }
+
+  mat-sidenav-container.sidenav-container {
+    min-width: 100vw;
+  }
+
+  .sidenav-content {
+    overflow: visible;
+  }
+}

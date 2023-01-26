@@ -1,0 +1,7 @@
+@use './base' as base;
+@use './layout' as layout;
+@use 'print/print';
+
+@use '@angular/material' as mat;
+
+@include mat.core();

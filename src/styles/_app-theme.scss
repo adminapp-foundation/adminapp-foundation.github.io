@@ -1,0 +1,5 @@
+@use 'base/base-theme';
+
+@mixin theme($theme) {
+  @include base-theme.theme($theme);
+}
